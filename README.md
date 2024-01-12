@@ -9,15 +9,10 @@ La instalación que se muestra a continuación es para <a href="https://openwrt.
   
 **Versión a instalar:** <a href="https://github.com/fail2ban/fail2ban/releases" target="_blank">Fail2ban 0.11.2-9</a>.
 
-**Requisitos:** nano (Puede utilizar "vi" y omitir este paso).
-```bash 
-opkg update && opkg install nano
-```
-
   ## Comandos: ##
   * Paso 1: Modificar el archivo /etc/config/system para hablitar la creación del archivo de log.
 ```bash 
-nano /etc/config/system
+vi /etc/config/system
 ```
 
   * Paso 2: Agregar las siguiente lineas.
@@ -42,7 +37,7 @@ cd /etc/fail2ban | touch jail.local
 
   * Paso 5: Agregar las siguientes lineas.
 ```bash 
-nano /etc/fail2ban/jail.local
+vi /etc/fail2ban/jail.local
 ```
 
 ```bash 
