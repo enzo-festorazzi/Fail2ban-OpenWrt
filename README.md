@@ -18,9 +18,9 @@ vi /etc/config/system
   * Paso 2: Agregar las siguiente lineas.
 ```bash 
 config system
-        option log_size '64'
+        option log_size '128'
         option conloglevel '8'
-        option cronloglevel '0'
+        option cronloglevel '8'
         option log_file '/tmp/system.log'
 ```
 Más info <a href="https://openwrt.org/docs/guide-user/base-system/system_configuration" target="_blank">aquí</a>.
@@ -84,6 +84,9 @@ banaction = iptables-allports
  ```bash 
   iptables -L -n
 ```
-
+  * Borrar historial
+ ```bash 
+  fail2ban-client restart dropbear
+```
 
   
