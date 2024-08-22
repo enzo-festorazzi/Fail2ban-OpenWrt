@@ -65,6 +65,7 @@ banaction = iptables-allports
 ```
 
   * Paso 6: Cambiar ubicacion de historial de ip bloqueadas para que se guarden de forma permanente.
+
 Crear carpeta
 ```bash
 mkdir /Fail2ban
