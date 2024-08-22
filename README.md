@@ -41,12 +41,13 @@ vi /etc/fail2ban/jail.local
 ```
 
 ```bash 
+[DEFAULT]
+# Tiempo por el cual se boqueara las ip. -1 Quedara bloqueada por siempre.
+bantime = -1
+
 [dropbear]
 # Habilitar Fail2ban en Dropbear.
 enabled = true
-
-# Tiempo por el cual se bloqueara las ip.
-bantime = 1d
 
 # Indica el filtro que Fail2Ban utilizará para buscar patrones en los registros.
 filter = dropbear
@@ -55,7 +56,7 @@ filter = dropbear
 logpath = /tmp/system.log
 
 # Establece el número máximo de intentos fallidos permitidos antes de aplicar la acción definida.
-maxretry = 2
+maxretry = 1
 
 # Utilizará iptables para bloquear el tráfico desde la dirección IP infractora en todos los puertos.
 banaction = iptables-allports
