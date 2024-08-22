@@ -64,7 +64,23 @@ maxretry = 1
 banaction = iptables-allports
 ```
 
-  * Paso 6: Iniciar servicio y habilitar servicio con el inicio del sistema.
+  * Paso 6: Cambiar ubicacion de historial de ip bloqueadas para que se guarden de forma permanente.
+Crear carpeta
+```bash
+mkdir /Fail2ban
+```
+Abrir archivo de configuración
+```bash
+vi /etc/config/fail2ban
+```
+Valores a configurar
+```bash
+config fail2ban 'fail2ban'
+        option dbfile '/Fail2ban/fail2ban.sqlite3'
+```
+
+
+  * Paso 7: Iniciar servicio y habilitar servicio con el inicio del sistema.
 ```bash 
 /etc/init.d/fail2ban start
 /etc/init.d/fail2ban enable
