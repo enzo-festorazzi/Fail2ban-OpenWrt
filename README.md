@@ -9,7 +9,7 @@ La instalación que se muestra a continuación es para <a href="https://openwrt.
   
 **Versión a instalar:** <a href="https://openwrt.org/packages/pkgdata/fail2ban" target="_blank">Fail2ban 0.11.2-8</a>.
 
-  ## Instalación: ##
+  ## Configuración de archivo de log: ##
   * Paso 1: Modificar el archivo /etc/config/system para hablitar la creación del archivo de log.
 ```bash 
 vi /etc/config/system
@@ -24,6 +24,8 @@ config system
         option log_file '/tmp/system.log'
 ```
 Más info <a href="https://openwrt.org/docs/guide-user/base-system/system_configuration" target="_blank">aquí</a>.
+
+  ## Instalación: ##
 
   * Paso 3: Instalar Fail2ban.
 ```bash 
