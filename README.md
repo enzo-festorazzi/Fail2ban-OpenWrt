@@ -14,8 +14,12 @@ La instalación que se muestra a continuación es para <a href="https://openwrt.
 ```bash 
 vi /etc/config/system
 ```
+  * Paso 2: Reiniciar servicio de log.
+```bash 
+service log restart
+```
 
-  * Paso 2: Agregar las siguiente lineas.
+  * Paso 3: Agregar las siguiente lineas.
 ```bash 
 config system
         option log_size '128'
@@ -27,17 +31,17 @@ Más info <a href="https://openwrt.org/docs/guide-user/base-system/system_config
 
   ## Instalación: ##
 
-  * Paso 3: Instalar Fail2ban.
+  * Paso 4: Instalar Fail2ban.
 ```bash 
 opkg update && opkg install fail2ban
 ```
 
-  * Paso 4: Crear archivo jail.local (El archivo jail.conf no se debe modificar).
+  * Paso 5: Crear archivo jail.local (El archivo jail.conf no se debe modificar).
 ```bash 
 cd /etc/fail2ban | touch jail.local
 ```
 
-  * Paso 5: Agregar las siguientes lineas.
+  * Paso 6: Agregar las siguientes lineas.
 ```bash 
 vi /etc/fail2ban/jail.local
 ```
@@ -64,7 +68,7 @@ maxretry = 1
 banaction = iptables-allports
 ```
 
-  * Paso 6: Cambiar ubicacion de historial de ip bloqueadas para que se guarden de forma permanente.
+  * Paso 7: Cambiar ubicacion de historial de ip bloqueadas para que se guarden de forma permanente.
 
 Crear carpeta
 ```bash
@@ -81,7 +85,7 @@ config fail2ban 'fail2ban'
 ```
 
 
-  * Paso 7: Iniciar servicio y habilitar servicio con el inicio del sistema.
+  * Paso 8: Iniciar servicio y habilitar servicio con el inicio del sistema.
 ```bash 
 /etc/init.d/fail2ban start
 /etc/init.d/fail2ban enable
