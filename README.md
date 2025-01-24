@@ -7,7 +7,7 @@
 
 La instalación que se muestra a continuación es para <a href="https://openwrt.org/releases/23.05/notes-23.05.5" target="_blank">OpenWRT 23.05.5</a>.
   
-**Versión a instalar:** <a href="https://openwrt.org/packages/pkgdata/fail2ban" target="_blank">Fail2ban 0.11.2-8</a>.
+**Versión a instalar:** <a href="https://openwrt.org/packages/pkgdata/fail2ban" target="_blank">Fail2ban 0.11.2-9</a>.
 
   ## Configuración de archivo de log: ##
   * Paso 1: Modificar el archivo /etc/config/system para hablitar la creación del archivo de log.
