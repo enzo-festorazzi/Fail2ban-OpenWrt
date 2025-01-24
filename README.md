@@ -5,7 +5,7 @@
 
 # <div align="center">Instalar y configurar Fail2ban en OpenWrt
 
-La instalación que se muestra a continuación es para <a href="https://openwrt.org/releases/23.05/notes-23.05.4" target="_blank">OpenWRT 23.5.4</a>.
+La instalación que se muestra a continuación es para <a href="https://openwrt.org/releases/23.05/notes-23.05.5" target="_blank">OpenWRT 23.5.5</a>.
   
 **Versión a instalar:** <a href="https://openwrt.org/packages/pkgdata/fail2ban" target="_blank">Fail2ban 0.11.2-8</a>.
 
